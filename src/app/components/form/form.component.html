@@ -1,0 +1,23 @@
+<div class="container">
+<mat-form-field>
+  <input matInput placeholder="ID parque"  type="number" min="0" required name="ID_Parque"  [(ngModel)] = "this.parque.selected.ID_Parque" >
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput placeholder="Superficie en CA" maxlength="50" name="Superficie_CA" [(ngModel)] = "this.parque.selected.Superficie_CA" >
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput placeholder="Nombre parque" maxlength="100" name="Nombre_Parque" [(ngModel)] = "this.parque.selected.Nombre_Parque" >
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput placeholder="Fecha declaracion" type="date" name="Fecha_Declaracion" [(ngModel)] = "this.parque.selected.Fecha_Declaracion" >
+</mat-form-field>
+
+<button mat-flat-button color="accent" (click)="onSaveForm()">
+  Guardar
+  <mat-icon>save</mat-icon>
+</button>
+
+</div>

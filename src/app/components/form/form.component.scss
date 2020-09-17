@@ -1,0 +1,10 @@
+.container
+{
+  display: inline-block;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+.container> * {
+  width: 95%;
+}

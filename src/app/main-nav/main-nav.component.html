@@ -1,0 +1,36 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport= "false"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar color="accent">Menú</mat-toolbar>
+
+
+
+
+    <mat-nav-list>
+      <a mat-list-item href="#"><mat-icon>home</mat-icon>&nbsp; Principal</a>
+      <a mat-list-item href="#"><mat-icon>eco</mat-icon>&nbsp; Areas</a>
+      <a mat-list-item href="#"><mat-icon>roofing</mat-icon> &nbsp; Alojamientos</a>
+      <a mat-list-item href="#"><mat-icon>people_alt</mat-icon> &nbsp; Empleados</a>
+      <a mat-list-item [routerLink]="['parques']"><mat-icon>terrain</mat-icon> &nbsp; Parques</a>
+      <a mat-list-item href="#"><mat-icon>luggage</mat-icon> &nbsp; Visitantes</a>
+      <a mat-list-item href="#"><mat-icon>nature_people</mat-icon> &nbsp; Visitas</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="accent">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      &nbsp;
+      <span>Sistema gestión de parques</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

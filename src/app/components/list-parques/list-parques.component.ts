@@ -15,7 +15,7 @@ import { FormComponent } from '../form/form.component';
 })
 export class ListParquesComponent implements OnInit {
 
-  displayedColumns: string[] = ['ID_Parque', 'Superficie_CA', 'Nombre_Parque', 'Fecha_Declaracion','Acciones','BtnAgregar'];
+  displayedColumns: string[] = ['ID_Parque', 'Superficie_CA', 'Nombre_Parque', 'Fecha_Declaracion','Activo','Acciones','BtnAgregar'];
   dataSource = new MatTableDataSource();
 
   @ViewChild(MatSort) sort: MatSort;
@@ -64,6 +64,7 @@ export class ListParquesComponent implements OnInit {
     this.parquesService.selected.Superficie_CA = '';
     this.parquesService.selected.Nombre_Parque ='';
     this.parquesService.selected.Fecha_Declaracion ='';
+    this.parquesService.selected.Activo = '';
     this.parquesService.selected.id = null;
   }
 

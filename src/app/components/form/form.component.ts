@@ -19,9 +19,9 @@ export class FormComponent implements OnInit {
         Fecha_Declaracion:new FormControl('',Validators.requiered)
     })
   }
-
-  formParque: FormGroup;
 */
+
+
   constructor(
     public parque: ParquesService,
     private dialogRef: MatDialogRef <FormComponent>,
@@ -38,7 +38,8 @@ export class FormComponent implements OnInit {
         ID_Parque: this.parque.selected.ID_Parque,
         Superficie_CA: this.parque.selected.Superficie_CA,
         Nombre_Parque: this.parque.selected.Nombre_Parque,
-        Fecha_Declaracion: this.parque.selected.Fecha_Declaracion
+        Fecha_Declaracion: this.parque.selected.Fecha_Declaracion,
+        Activo: "true"
       }
       this.parque.addParque(newParque);
 

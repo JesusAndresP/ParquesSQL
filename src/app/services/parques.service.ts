@@ -19,7 +19,8 @@ export class ParquesService {
     ID_Parque: 0,
     Superficie_CA:'',
     Nombre_Parque:'',
-    Fecha_Declaracion: ''
+    Fecha_Declaracion: '',
+    Activo:''
   };
 
 

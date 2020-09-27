@@ -3,7 +3,7 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar color="accent">Menú</mat-toolbar>
+    <mat-toolbar color="primary">Menú</mat-toolbar>
 
 
 
@@ -15,12 +15,13 @@
       <a mat-list-item href="#"><mat-icon>people_alt</mat-icon> &nbsp; Empleados</a>
       <a mat-list-item [routerLink]="['parques']"><mat-icon>terrain</mat-icon> &nbsp; Parques</a>
       <a mat-list-item href="#"><mat-icon>luggage</mat-icon> &nbsp; Visitantes</a>
-      <a mat-list-item href="#"><mat-icon>nature_people</mat-icon> &nbsp; Visitas</a>
+      <a mat-list-item href="#"><mat-icon>nature_people</mat-icon> &nbsp; Servicios</a>
     </mat-nav-list>
   </mat-sidenav>
-  
+
   <mat-sidenav-content>
-    <mat-toolbar color="accent">
+    <mat-toolbar color="primary">
+
       <button
         type="button"
         aria-label="Toggle sidenav"

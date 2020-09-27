@@ -22,7 +22,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 ];
 
 @Component({
-    selector: 'ListEmpleados',
+    selector: 'app-list-empleados',
     templateUrl: './list-empleados.component.html',
     styleUrls: ['./list-empelados.component.scss']
   })
@@ -30,10 +30,10 @@ const ELEMENT_DATA: PeriodicElement[] = [
     displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
- 
+
 
     constructor(){}
- 
+
     ngOnInit(){}
     applyFilter(filterValue: string) {
         this.dataSource.filter = filterValue.trim().toLowerCase();

@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatModule } from './mat/mat.module';
 import { ListParquesComponent } from './components/list-parques/list-parques.component';
+import { ListEmpleadosComponent } from './components/list-empleados/list-empleados.component';
 import { ParquesService } from './services/parques.service';
+import {EmpleadosService} from './services/empleados.service';
 //firebase
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
@@ -20,6 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 
@@ -28,8 +31,10 @@ import { MatListModule } from '@angular/material/list';
   declarations: [
     AppComponent,
     ListParquesComponent,
+    ListEmpleadosComponent,
     FormComponent,
-    MainNavComponent
+    MainNavComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,8 @@ import { MatListModule } from '@angular/material/list';
     MatIconModule,
     MatListModule
   ],
-  providers: [ParquesService],
+  providers: [ParquesService,EmpleadosService],
+  
   bootstrap: [AppComponent],
   entryComponents:[FormComponent] //Controla donde se muestra el componente
 })

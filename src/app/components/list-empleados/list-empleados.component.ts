@@ -9,6 +9,7 @@ import { FormComponent } from '../form/form.component';
 
 
 @Component({
+
   selector: 'app-list-empleados',
   templateUrl: './list-empleados.component.html',
   styleUrls: ['./list-empleados.component.scss']
@@ -70,5 +71,21 @@ export class ListEmpleadosComponent implements OnInit {
     this.empleadoService.selected.id = null;
   }
 
+    selector: 'app-list-empleados',
+    templateUrl: './list-empleados.component.html',
+    styleUrls: ['./list-empelados.component.scss']
+  })
+  export class ListEmpleadosComponent implements OnInit {
+    displayedColumns: string[] = ['DNI', 'NOMBRE', '# SEGURIDAD SOCIAL', 'DIRECCION', 'TELEFONO', 'SALARIO','TIPO DE EMPLEADO'];
+  dataSource = new MatTableDataSource();
+
+
+
+    constructor(){}
+
+    ngOnInit(){}
+    applyFilter(filterValue: string) {
+        this.dataSource.filter = filterValue.trim().toLowerCase();
+      }
 
 }

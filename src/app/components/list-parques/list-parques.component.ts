@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource} from '@angular/material/table';
-import {MatSort} from '@angular/material/sort';
+import { MatSort } from '@angular/material/sort';
 import { ParquesI } from '../../../models/parques.interface';
 import { ParquesService } from '../../services/parques.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';

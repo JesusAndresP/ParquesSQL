@@ -7,7 +7,7 @@
 export const environment = {
   production: false,
   configFirebase:{
-    apiKey: "AIzaSyBvttWoClSl5dz3-tjKi40huwALP5KOh6w",
+  apiKey: "AIzaSyBvttWoClSl5dz3-tjKi40huwALP5KOh6w",
   authDomain: "parquesnaturales-5b738.firebaseapp.com",
   databaseURL: "https://parquesnaturales-5b738.firebaseio.com",
   projectId: "parquesnaturales-5b738",

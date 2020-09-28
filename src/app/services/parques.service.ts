@@ -34,6 +34,15 @@ export class ParquesService {
       }))
     );
   }
+
+  //Metodo agregar
+  addParque(parque:ParquesI){
+    return this.parquesCollection.add(parque);
+
+  }
+
+
+
   getAllParques(){
     // retorna todos los parques
     return this.parques;
@@ -48,8 +57,5 @@ export class ParquesService {
   deleteParque(id: string){
     return this.parquesCollection.doc(id).delete();
   }
-  addParque(parque:ParquesI){
-    return this.parquesCollection.add(parque);
 
-  }
 }

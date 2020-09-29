@@ -4,7 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { ParquesI } from '../../../models/parques.interface';
 import { ParquesService } from '../../services/parques.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { FormComponent } from '../form/form.component';
+import { FormParquesComponent } from '../form-parques/form-parques.component';
 
 
 
@@ -27,13 +27,14 @@ export class ListParquesComponent implements OnInit {
   ngOnInit(): void {
     this.parquesService.getAllParques().subscribe(res=> this.dataSource.data = res);
   }
-
+  
   ngAfterViewInit(){
     this.dataSource.sort = this.sort;
   }
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
  //Metodo editar
   onEdit(element){
     this.resetForm();
@@ -48,14 +49,14 @@ export class ListParquesComponent implements OnInit {
   onDelete(id:string){
     this.parquesService.deleteParque(id);
   }
-
+//Metodo para abrir pop up
   openModal(): void{
     const dialogConfig = new MatDialogConfig();
     dialogConfig.data={
       title: 'Modal'
     };
     dialogConfig.autoFocus = true; //El foco del raton está en el formulario
-    this.dialog.open(FormComponent, dialogConfig); //Abre el popup con el formulario
+    this.dialog.open(FormParquesComponent, dialogConfig); //Abre el popup con el formulario
 
   }
 

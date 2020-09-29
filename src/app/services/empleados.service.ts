@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore'
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/Operators';
 import { EmpleadosI } from '../../models/empleados.interface';
@@ -14,15 +14,17 @@ export interface EmpleadosID extends EmpleadosI {id: string;}
 export class EmpleadosService {
   private empleadosCollection: AngularFirestoreCollection<EmpleadosI>;
   empleados: Observable<EmpleadosID[]>;
+
   public selected ={
     id: null,
-    dni: 0,
-    nombre:'',
-    n_ss:'',
-    direccion: '',
-    telefono:'',
-    salario: '',
-    tipo_empleado: '',
+    ID_Empleado: 0,
+    Nombre_Empleado:'',
+    SeguridadSocial:0,
+    Direccion: '',
+    Telefono:0,
+    Celular:0,
+    Sueldo: 0,
+    Tipo_Empleado: '',
   };
 
 
@@ -36,21 +38,24 @@ export class EmpleadosService {
       }))
     );
   }
+
+  addEmpleado(empleado:EmpleadosI){
+    return this.empleadosCollection.add(empleado);
+
+  }
+
+//Devuelve todos los empleados de nuestra coleccion
   getAllEmpleados(){
     return this.empleados;
   }
 
   editEmpleado(empleado:EmpleadosID){
 
-    return this.empleadosCollection.doc(empleado.id).update(this.empleados);
+    return this.empleadosCollection.doc(empleado.id).update(empleado);
 
   }
   //Obtiene el id del dato a eliminar y lo borra de firebase
   deleteEmpleado(id: string){
     return this.empleadosCollection.doc(id).delete();
-  }
-  addEmpleado(empelado:EmpleadosI){
-    return this.empleadosCollection.add(empelado);
-
   }
 }

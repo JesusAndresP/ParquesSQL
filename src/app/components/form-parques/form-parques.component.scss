@@ -1,12 +1,11 @@
 .container{
-  display: flex;
+  display:100% ;
   flex-direction: column;
-  margin-top: 2rem;
 }
 
 
 //Para elementos dentro de container
 .container > * {
-width: 98%;
-margin-left: 1%;
+width: 100%;
 }
+

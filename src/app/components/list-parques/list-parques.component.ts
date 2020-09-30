@@ -7,7 +7,6 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { FormParquesComponent } from '../form-parques/form-parques.component';
 
 
-
 @Component({
   selector: 'app-list-parques',
   templateUrl: './list-parques.component.html',
@@ -18,6 +17,7 @@ export class ListParquesComponent implements OnInit {
   displayedColumns: string[] = ['ID_Parque', 'Superficie_CA', 'Nombre_Parque', 'Fecha_Declaracion','Activo','Acciones','BtnAgregar'];
   dataSource = new MatTableDataSource();
 
+
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(
@@ -27,7 +27,7 @@ export class ListParquesComponent implements OnInit {
   ngOnInit(): void {
     this.parquesService.getAllParques().subscribe(res=> this.dataSource.data = res);
   }
-  
+
   ngAfterViewInit(){
     this.dataSource.sort = this.sort;
   }

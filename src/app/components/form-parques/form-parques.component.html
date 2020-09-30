@@ -9,8 +9,9 @@
     <input matInput placeholder="Nombre parque" name="Nombre_Parque" [(ngModel)]=this.parque.selected.Nombre_Parque>
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="Fecha declaración" name="Fecha_Declaracion" [(ngModel)]=this.parque.selected.Fecha_Declaracion>
+    <input matInput type="date" placeholder="Fecha declaración" name="Fecha_Declaracion" [(ngModel)]=this.parque.selected.Fecha_Declaracion>
   </mat-form-field>
+
   <button type="submit" mat-flat-button color="primary" (click)= "onSaveForm()">
     <mat-icon>save</mat-icon> Guardar
   </button>

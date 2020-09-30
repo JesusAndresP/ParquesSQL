@@ -24,5 +24,7 @@ $btn-custom: mat-light-theme($btn-custom-primary,$btn-custom-accent,$btn-custom-
 
 @include mat-button-theme($btn-custom);
 @include mat-toolbar-theme($custom);
+@include mat-datepicker-theme($btn-custom);
+@include mat-form-field-theme($btn-custom);
 
 //https://github.com/angular/components/blob/master/src/material/core/theming/_all-theme.scss

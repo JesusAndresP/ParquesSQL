@@ -6,7 +6,6 @@ import { MatSort } from '@angular/material/sort';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { FormEmpleadosComponent } from '../form-empleados/form-empleados.component';
 
-
 @Component({
 
   selector: 'app-list-empleados',
@@ -16,6 +15,8 @@ import { FormEmpleadosComponent } from '../form-empleados/form-empleados.compone
 export class ListEmpleadosComponent implements OnInit{
   displayedColumns: string[] = ['ID_Empleado', 'Nombre_Empleado', 'SeguridadSocial', 'Direccion','Telefono','Celular','Sueldo','Tipo_Empleado','Acciones','BtnAgregar'];
   dataSource = new MatTableDataSource();
+
+
 
   @ViewChild(MatSort) sort: MatSort;
 

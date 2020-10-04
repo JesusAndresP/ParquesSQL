@@ -5,17 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatModule } from './mat/mat.module';
-import { ListParquesComponent } from './components/list-parques/list-parques.component';
-import { ListEmpleadosComponent } from './components/list-empleados/list-empleados.component';
-import { ParquesService } from './services/parques.service';
-import { EmpleadosService } from './services/empleados.service';
 import { ReactiveFormsModule } from '@angular/forms';
-//firebase
-import { environment } from '../environments/environment';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule} from '@angular/fire/firestore';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { FormParquesComponent } from './components/form-parques/form-parques.component';
 import { FormsModule } from '@angular/forms';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -24,7 +14,32 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+
+
+
+// lists
+import { ListParquesComponent } from './components/list-parques/list-parques.component';
+import { ListEmpleadosComponent } from './components/list-empleados/list-empleados.component';
+import { ListVisitantesComponent } from './components/list-visitantes/list-visitantes.component';
+
+
+//services
+import { ParquesService } from './services/parques.service';
+import { EmpleadosService } from './services/empleados.service';
+import { VisitantesService } from  './services/visitantes.service';
+
+//forms
+import { FormParquesComponent } from './components/form-parques/form-parques.component';
 import { FormEmpleadosComponent} from './components/form-empleados/form-empleados.component';
+
+
+
+//firebase
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule} from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { FormVisitantesComponent } from './components/form-visitantes/form-visitantes.component';
 
 
 
@@ -34,10 +49,13 @@ import { FormEmpleadosComponent} from './components/form-empleados/form-empleado
     AppComponent,
     ListParquesComponent,
     ListEmpleadosComponent,
+    ListVisitantesComponent,
     MainNavComponent,
     ToolbarComponent,
     FormParquesComponent,
-    FormEmpleadosComponent
+    FormEmpleadosComponent,
+    FormVisitantesComponent,
+ 
 
   ],
   imports: [
@@ -56,7 +74,7 @@ import { FormEmpleadosComponent} from './components/form-empleados/form-empleado
     MatListModule,
     ReactiveFormsModule
   ],
-  providers: [ParquesService,EmpleadosService],
+  providers: [ParquesService,EmpleadosService,VisitantesService],
 
   bootstrap: [AppComponent],
   entryComponents:[FormParquesComponent,FormEmpleadosComponent] //Controla donde se muestra el componente

@@ -20,7 +20,7 @@ export class ParquesService {
     Superficie_CA:'',
     Nombre_Parque:'',
     Fecha_Declaracion: '',
-    Activo:''
+    Activo:'true'
   };
 
 

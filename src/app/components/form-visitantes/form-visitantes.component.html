@@ -1,0 +1,19 @@
+<div class="container">
+    <mat-form-field>
+      <input matInput placeholder="No. documento visitante" name="ID_Visitante" [(ngModel)]=this.visitante.selected.ID_Visitante>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Nombre y apellidos visitante" name="Nombre_Visitante" [(ngModel)]=this.visitante.selected.Nombre_Visitante>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Dirección visitante" name="Direccion_Visitante" [(ngModel)]=this.visitante.selected.Direccion_Visitante>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Profesión visitante" name="Profesion_Visitante" [(ngModel)]=this.visitante.selected.Profesion_Visitante>
+    </mat-form-field>
+  
+    <button type="submit" mat-flat-button color="primary" (click)= "onSaveForm()">
+      <mat-icon>save</mat-icon> Guardar
+    </button>
+  </div>
+  

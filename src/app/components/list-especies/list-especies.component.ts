@@ -15,7 +15,7 @@ import { FormEspeciesComponent } from '../form-especies/form-especies.component'
 })
 export class ListEspeciesComponent implements OnInit {
 
-  displayedColumns: string[] = ['Tipo_Especie', 'Nombre', 'Sexo'];
+  displayedColumns: string[] = ['Tipo_Especie', 'Nombre_Especie', 'Sexo'];
   dataSource = new MatTableDataSource();
 
   @ViewChild(MatSort) sort: MatSort;
@@ -61,7 +61,7 @@ export class ListEspeciesComponent implements OnInit {
 
   resetForm(): void{
     this.especiesService.selected.Tipo_Especie = '';
-    this.especiesService.selected.Nombre ='';
+    this.especiesService.selected.Nombre_Especie ='';
     this.especiesService.selected.Sexo ='';
   }
 

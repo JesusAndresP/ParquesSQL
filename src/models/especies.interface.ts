@@ -1,6 +1,6 @@
 export interface EspeciesI {
   $key?: string; //Angular necesita este campo.
     Tipo_Especie: string;
-    Nombre: string;
+    Nombre_Especie: string;
     Sexo: string;
   }

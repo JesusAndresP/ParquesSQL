@@ -18,7 +18,7 @@ export class EspeciesService {
   public selected ={
     id: null,
     Tipo_Especie:'',
-    Nombre: '',
+    Nombre_Especie: '',
     Sexo: '',
   };
 

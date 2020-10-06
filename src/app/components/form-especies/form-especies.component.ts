@@ -24,9 +24,9 @@ export class FormEspeciesComponent implements OnInit {
   onSaveForm(){
     if(this.especies.selected.id ==null){
       let newEspecies ={
-      tipo_especie: this.especies.selected.ID_Especies,
-      nombre: this.especies.selected.ID_Especies,
-      sexo: this.especies.selected.ID_Especies
+      Tipo_Especie: this.especies.selected.Tipo_Especie,
+      Nombre_Especie: this.especies.selected.Nombre_Especie,
+      Sexo: this.especies.selected.Sexo
       }
       this.especies.addEspecies(newEspecies);
     }

@@ -1,0 +1,11 @@
+.container{
+  display:100% ;
+  flex-direction: column;
+}
+
+
+//Para elementos dentro de container
+.container > * {
+width: 100%;
+}
+

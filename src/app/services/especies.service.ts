@@ -45,10 +45,12 @@ export class EspeciesService {
   }
 
   editEspecies(especies:EspeciesID){
-
-    return this.especiesCollection.doc(especies.id).update(especies);
+    let id= '';
+    return this.especiesCollection.doc(id).update(especies);
 
   }
+
+
   //Obtiene el id del dato a eliminar y lo borra de firebase
   deleteEspecies(id: string){
     return this.especiesCollection.doc(id).delete();

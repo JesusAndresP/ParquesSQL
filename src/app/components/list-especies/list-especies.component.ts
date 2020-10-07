@@ -15,9 +15,8 @@ import { FormEspeciesComponent } from '../form-especies/form-especies.component'
 })
 export class ListEspeciesComponent implements OnInit {
 
-  displayedColumns: string[] = ['Tipo_Especie', 'Nombre_Especie', 'Sexo'];
+  displayedColumns: string[] = ['Tipo_Especie', 'Nombre_Especie', 'Sexo','Acciones','BtnAgregar'];
   dataSource = new MatTableDataSource();
-
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(
@@ -48,7 +47,7 @@ export class ListEspeciesComponent implements OnInit {
   onDelete(id:string){
     this.especiesService.deleteEspecies(id);
   }
-
+//Metodo para abrir pop up
   openModal(): void{
     const dialogConfig = new MatDialogConfig();
     dialogConfig.data={

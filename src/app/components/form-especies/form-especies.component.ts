@@ -22,15 +22,14 @@ export class FormEspeciesComponent implements OnInit {
   }
 
   onSaveForm(){
-    if(this.especies.selected.id ==null){
+    if(this.especies.selected.id==null){
       let newEspecies ={
       Tipo_Especie: this.especies.selected.Tipo_Especie,
       Nombre_Especie: this.especies.selected.Nombre_Especie,
       Sexo: this.especies.selected.Sexo
       }
       this.especies.addEspecies(newEspecies);
-    }
-    else{
+    }else{
       this.especies.editEspecies(this.especies.selected);
     }
     this.close();

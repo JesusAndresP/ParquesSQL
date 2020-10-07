@@ -1,13 +1,14 @@
 <div class="container">
   <mat-form-field>
-    <input matInput placeholder="tipo_especie" name="tipo_especie" [(ngModel)]=this.especie.selected.tipo_especie>
+    <input matInput placeholder="Tipo_Especie" name="Tipo_Especie" [(ngModel)]=this.especies.selected.Tipo_Especie>
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="nombre_especie" name="nombre_especie" [(ngModel)]=this.especie.selected.nombre_especie>
+    <input matInput placeholder="Nombre_Especie" name="Nombre_Especie" [(ngModel)]=this.especies.selected.Nombre_Especie>
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="sexo" name="sexo" [(ngModel)]=this.especie.selected.sexo>
+    <input matInput placeholder="Sexo" name="Sexo" [(ngModel)]=this.especies.selected.Sexo>
   </mat-form-field>
+  
   <button type="submit" mat-flat-button color="primary" (click)= "onSaveForm()">
     <mat-icon>save</mat-icon> Guardar
   </button>

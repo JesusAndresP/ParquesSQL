@@ -1,48 +1,96 @@
 <mat-form-field>
-  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar empleado">
+
 </mat-form-field>
 
+<div class="container">
+
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-  <!-- dni Column -->
-  <ng-container matColumnDef="DNI">
-    <th mat-header-cell *matHeaderCellDef> dni </th>
-    <td mat-cell *matCellDef="let element"> {{element.dni}} </td>
+  <ng-container matColumnDef="BtnAgregar">
+    <th mat-header-cell *matHeaderCellDef>
+      <button mat-button color="primary" (click)= "onEdit()">
+      Agregar
+      <mat-icon>add_circle_outline</mat-icon>
+    </button> </th>
+    <td mat-cell *matCellDef= "let element"> </td>
   </ng-container>
 
-  <!-- nombre Column -->
-  <ng-container matColumnDef="NOMBRE">
-    <th mat-header-cell *matHeaderCellDef> nombre </th>
-    <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+
+
+  <!--Tabla empleados-->
+  <!-- ID Empleado Column -->
+  <ng-container matColumnDef="ID_Empleado">
+    <th mat-header-cell *matHeaderCellDef > ID Empleado </th>
+    <td mat-cell *matCellDef="let element"> {{element.ID_Empleado}} </td>
   </ng-container>
 
-  <!-- n_ss Column -->
-  <ng-container matColumnDef="# Seguridad Social">
-    <th mat-header-cell *matHeaderCellDef> n_ss   </th>
-    <td mat-cell *matCellDef="let element"> {{element.n_ss}} </td>
-  </ng-container>
-
-  <!-- Direccion Column -->
-  <ng-container matColumnDef="Direccion">
-    <th mat-header-cell *matHeaderCellDef> direcciom </th>
-    <td mat-cell *matCellDef="let element"> {{element.direccio}} </td>
-  </ng-container>
-   <!-- Telefono Column -->
-   <ng-container matColumnDef="Telefono">
-    <th mat-header-cell *matHeaderCellDef> telefono </th>
-    <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
-  </ng-container>
-   <!-- Salario Column -->
-   <ng-container matColumnDef="Salario">
-    <th mat-header-cell *matHeaderCellDef> salario </th>
-    <td mat-cell *matCellDef="let element"> {{element.salario}} </td>
-  </ng-container>
-    <!-- Tipo Empleado Column -->
-    <ng-container matColumnDef="Tipo Empelado">
-      <th mat-header-cell *matHeaderCellDef> tipo_empleado </th>
-      <td mat-cell *matCellDef="let element"> {{element.tipo_empleado}} </td>
+    <!-- Nombre Column -->
+    <ng-container matColumnDef="Nombre_Empleado">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.Nombre_Empleado}} </td>
     </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+    <!-- # Seguridad Social Column -->
+    <ng-container matColumnDef="SeguridadSocial">
+      <th mat-header-cell *matHeaderCellDef> # Seguridad Social </th>
+      <td mat-cell *matCellDef="let element"> {{element.SeguridadSocial}} </td>
+    </ng-container>
+
+    <!-- Direccion Column -->
+    <ng-container matColumnDef="Direccion">
+      <th mat-header-cell *matHeaderCellDef> Direccion </th>
+      <td mat-cell *matCellDef="let element"> {{element.Direccion}} </td>
+    </ng-container>
+
+     <!-- Telefono Column -->
+     <ng-container matColumnDef="Telefono">
+      <th mat-header-cell *matHeaderCellDef> Telefono </th>
+      <td mat-cell *matCellDef="let element"> {{element.Telefono}} </td>
+    </ng-container>
+
+    <!-- Telefono Column -->
+     <ng-container matColumnDef="Celular">
+      <th mat-header-cell *matHeaderCellDef> Celular </th>
+      <td mat-cell *matCellDef="let element"> {{element.Celular}} </td>
+    </ng-container>
+
+     <!-- Salario Column -->
+     <ng-container matColumnDef="Sueldo">
+      <th mat-header-cell *matHeaderCellDef> Sueldo </th>
+      <td mat-cell *matCellDef="let element"> {{element.Sueldo}} </td>
+    </ng-container>
+
+      <!-- Tipo Empleado Column -->
+      <ng-container matColumnDef="Tipo_Empleado">
+        <th mat-header-cell *matHeaderCellDef> Tipo Empleado </th>
+        <td mat-cell *matCellDef="let element"> {{element.Tipo_Empleado}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef= "Acciones">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef= "let element">
+
+
+          <button mat-button color= "accent" (click)= "onEdit (element)" >
+            Editar
+            <mat-icon>edit</mat-icon>
+          </button> &nbsp;
+
+          <button mat-button color="warn" (click)= "onDelete (element.id)">
+            Eliminar
+            <mat-icon>delete</mat-icon>
+          </button > &nbsp;
+        </td>
+      </ng-container>
+
+
+
+
+
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>

@@ -1,18 +1,18 @@
-<div class="container">
+<div class="container" [formGroup]="signupForm">
   <mat-form-field>
-    <input matInput placeholder="Id parque" name="ID_Parque" [(ngModel)]=this.parque.selected.ID_Parque>
+    <input matInput  type="number" maxlength="10" min="1" placeholder="Id parque" name="ID_Parque" [(ngModel)]=this.parque.selected.ID_Parque formControlName="ID_Parque">
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="Superficie en CA" name="Superficie_CA" [(ngModel)]=this.parque.selected.Superficie_CA>
+    <input matInput maxlength="10" placeholder="Superficie en CA" name="Superficie_CA" [(ngModel)]=this.parque.selected.Superficie_CA formControlName="Superficie_CA">
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="Nombre parque" name="Nombre_Parque" [(ngModel)]=this.parque.selected.Nombre_Parque>
+    <input matInput type="text" maxlength="100"placeholder="Nombre parque" name="Nombre_Parque" [(ngModel)]=this.parque.selected.Nombre_Parque formControlName="Nombre_Parque">
   </mat-form-field>
   <mat-form-field>
-    <input matInput type="date" placeholder="Fecha declaración" name="Fecha_Declaracion" [(ngModel)]=this.parque.selected.Fecha_Declaracion>
+    <input matInput type="date" placeholder="Fecha declaración" name="Fecha_Declaracion" [(ngModel)]=this.parque.selected.Fecha_Declaracion formControlName="Fecha_Declaracion">
   </mat-form-field>
 
-  <button type="submit" mat-flat-button color="primary" (click)= "onSaveForm()">
+  <button type="submit" mat-flat-button color="primary" (click)= "onSaveForm(signupForm.value)" [disabled]="signupForm.invalid">
     <mat-icon>save</mat-icon> Guardar
   </button>
 </div>

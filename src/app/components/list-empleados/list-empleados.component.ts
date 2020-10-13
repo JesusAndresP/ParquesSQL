@@ -15,15 +15,11 @@ import { FormEmpleadosComponent } from '../form-empleados/form-empleados.compone
 export class ListEmpleadosComponent implements OnInit{
   displayedColumns: string[] = ['ID_Empleado', 'Nombre_Empleado', 'SeguridadSocial', 'Direccion','Telefono','Celular','Sueldo','Tipo_Empleado','Acciones','BtnAgregar'];
   dataSource = new MatTableDataSource();
-
-
-
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(
     private empleadoService: EmpleadosService,
-    private dialog: MatDialog
-    ) { }
+    private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.empleadoService.getAllEmpleados().subscribe(res=> this.dataSource.data = res );

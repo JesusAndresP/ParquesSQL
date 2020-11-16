@@ -1,0 +1,23 @@
+.main-container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+}
+
+mat-sidenav {
+      width: 250px;
+} 
+.title-center {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  a mat-icon{
+     color:#616161 !important; 
+  }
+
+  .nombreU {
+      font-size: 70%;
+  }

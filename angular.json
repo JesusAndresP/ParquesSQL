@@ -24,7 +24,6 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-
               "src/favicon.ico",
               "src/assets"
             ],
@@ -95,7 +94,7 @@
             ],
             "styles": [
               {
-                "imput":"src/theme/custom.scss"
+                "imput": "src/theme/custom.scss"
               },
               "src/styles.scss"
             ],
@@ -126,6 +125,10 @@
               "devServerTarget": "Parques:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

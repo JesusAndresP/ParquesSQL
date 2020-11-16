@@ -41,7 +41,6 @@ export class ListParquesComponent implements OnInit {
     this.openModal();
     if(element){
       this.parquesService.selected = element;
-
     }
   }
   //Metodo eliminar

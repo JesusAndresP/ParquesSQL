@@ -1,18 +1,25 @@
-<div class="container">
+<div class="container" [formGroup]="parquesForm">
   <mat-form-field>
-    <input matInput placeholder="Id parque" name="ID_Parque" [(ngModel)]=this.parque.selected.ID_Parque>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Superficie en CA" name="Superficie_CA" [(ngModel)]=this.parque.selected.Superficie_CA>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Nombre parque" name="Nombre_Parque" [(ngModel)]=this.parque.selected.Nombre_Parque>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput type="date" placeholder="Fecha declaración" name="Fecha_Declaracion" [(ngModel)]=this.parque.selected.Fecha_Declaracion>
-  </mat-form-field>
+    <input matInput  type="number" maxlength="10" min="1" placeholder="Id parque" name="ID_Parque" [(ngModel)]=this.parque.selected.ID_Parque formControlName="ID_Parque">
 
-  <button type="submit" mat-flat-button color="primary" (click)= "onSaveForm()">
+    <!--↓-->
+    <mat-error *ngIF="isValidField('ID_Parque')">
+      {{ getErrorrMessage('ID_Parque')}}
+    </mat-error>
+  
+
+
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput maxlength="10" placeholder="Superficie en CA" name="Superficie_CA" [(ngModel)]=this.parque.selected.Superficie_CA formControlName="Superficie_CA">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" maxlength="100"placeholder="Nombre parque" name="Nombre_Parque" [(ngModel)]=this.parque.selected.Nombre_Parque formControlName="Nombre_Parque">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="date" placeholder="Fecha declaración" name="Fecha_Declaracion" [(ngModel)]=this.parque.selected.Fecha_Declaracion formControlName="Fecha_Declaracion">
+  </mat-form-field>
+  <button type="submit" mat-flat-button color="primary" (click)= "onSaveForm(parquesForm.value)" [disabled]="parquesForm.invalid">
     <mat-icon>save</mat-icon> Guardar
   </button>
 </div>

@@ -1,0 +1,25 @@
+mat-card-content{
+    display: flex;
+/*     max-width: 600px; */
+    flex-direction: column; 
+}
+
+mat-card{
+ width: 500px;
+} 
+
+mat-card-title{
+    color: #616161;
+    text-align: center;
+}
+
+mat-card-actions button{
+    width: 100%;
+}
+
+.login-form-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}

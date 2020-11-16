@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "parquesnaturales-5b738": {
+      "hosting": {
+        "Parques": [
+          "parquesnaturales-5b738"
+        ]
+      }
+    }
+  }
+}

@@ -7,14 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatModule } from './mat/mat.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-import { MainNavComponent } from './main-nav/main-nav.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { ToolbarComponent } from './toolbar/toolbar.component';
-
+import {MatTreeFlatDataSource, MatTreeFlattener, MatTreeModule} from '@angular/material/tree';
 
 
 // lists
@@ -42,6 +40,8 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule} from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/auth';
+import { SidenComponent } from './siden/siden.component';
 
 
 
@@ -53,13 +53,12 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     ListEmpleadosComponent,
     ListVisitantesComponent,
     ListEspeciesComponent,
-    MainNavComponent,
-    ToolbarComponent,
     FormParquesComponent,
     FormEmpleadosComponent,
     FormEspeciesComponent,
     FormVisitantesComponent,
- 
+    SidenComponent,
+
 
   ],
   imports: [
@@ -68,6 +67,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     BrowserAnimationsModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.configFirebase),
+    AngularFireAuthModule,
     AngularFireDatabaseModule,
     FormsModule,
     MatModule,
@@ -76,6 +76,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatTreeModule,
     ReactiveFormsModule
   ],
   providers: [ParquesService,EmpleadosService,VisitantesService,EspeciesService],

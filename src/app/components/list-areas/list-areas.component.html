@@ -1,0 +1,55 @@
+<mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar área">
+  </mat-form-field>
+<div class="container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="new">
+      <th mat-header-cell *matHeaderCellDef> 
+        <button mat-flat-button color="primary" (click)="onEdit()">
+          Agregar
+          <mat-icon>add_circle_outline</mat-icon>
+        </button>
+      </th>
+      <td mat-cell *matCellDef="let element"> </td>
+    </ng-container>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="ID_Area">
+      <th mat-header-cell *matHeaderCellDef> ID_Area </th>
+      <td mat-cell *matCellDef="let element"> {{element.ID_Area}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Nombre_Area">
+      <th mat-header-cell *matHeaderCellDef> Nombre_Area</th>
+      <td mat-cell *matCellDef="let element"> {{element.Nombre_Area}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Extension_Area">
+      <th mat-header-cell *matHeaderCellDef> Extension_Area </th>
+      <td mat-cell *matCellDef="let element"> {{element.Extension_Area}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Acciones">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+
+      <button mat-button color="accent" (click)="onEdit(element)">
+        Editar
+        <mat-icon>edit</mat-icon>
+      </button>&nbsp;
+
+      <button mat-button color="warn" (click)="onDelete(element.id)">
+        Eliminar
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+    </ng-container>
+
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+  

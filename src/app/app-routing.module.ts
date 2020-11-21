@@ -4,12 +4,18 @@ import { ListParquesComponent } from './components/list-parques/list-parques.com
 import { ListEmpleadosComponent } from './components/list-empleados/list-empleados.component';
 import { ListVisitantesComponent } from './components/list-visitantes/list-visitantes.component';
 import { ListEspeciesComponent } from './components/list-especies/list-especies.component';
+import { ListAreasComponent } from './components/list-areas/list-areas.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo:'/login',
+    redirectTo:'/home',
     pathMatch: 'full',
+  },
+  
+  {
+    path: 'areas', 
+    component: ListAreasComponent
   },
   {
     path:'parques',

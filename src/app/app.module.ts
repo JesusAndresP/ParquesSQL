@@ -27,6 +27,7 @@ import { ParquesService } from './services/parques.service';
 import { EmpleadosService } from './services/empleados.service';
 import { VisitantesService } from  './services/visitantes.service';
 import { EspeciesService } from  './services/especies.service';
+import { AreasService } from './services/areas.service';
 
 //forms
 import { FormParquesComponent } from './components/form-parques/form-parques.component';
@@ -42,6 +43,8 @@ import { AngularFirestoreModule} from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/auth';
 import { SidenComponent } from './siden/siden.component';
+import { ListAreasComponent } from './components/list-areas/list-areas.component';
+import { FormAreasComponent } from './components/form-areas/form-areas.component';
 
 
 
@@ -58,6 +61,8 @@ import { SidenComponent } from './siden/siden.component';
     FormEspeciesComponent,
     FormVisitantesComponent,
     SidenComponent,
+    ListAreasComponent,
+    FormAreasComponent,
 
 
   ],
@@ -79,9 +84,21 @@ import { SidenComponent } from './siden/siden.component';
     MatTreeModule,
     ReactiveFormsModule
   ],
-  providers: [ParquesService,EmpleadosService,VisitantesService,EspeciesService],
+  providers: [
+    ParquesService,
+    EmpleadosService,
+    VisitantesService,
+    EspeciesService,
+    AreasService
+  ],
 
   bootstrap: [AppComponent],
-  entryComponents:[FormParquesComponent,FormEmpleadosComponent,FormEspeciesComponent,FormVisitantesComponent] //Controla donde se muestra el componente
+  entryComponents:[
+    FormParquesComponent,
+    FormEmpleadosComponent,
+    FormEspeciesComponent,
+    FormVisitantesComponent,
+    FormAreasComponent
+] //Controla donde se muestra el componente
 })
 export class AppModule {}

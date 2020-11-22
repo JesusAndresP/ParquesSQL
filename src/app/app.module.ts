@@ -45,6 +45,8 @@ import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/auth';
 import { SidenComponent } from './siden/siden.component';
 import { ListAreasComponent } from './components/list-areas/list-areas.component';
 import { FormAreasComponent } from './components/form-areas/form-areas.component';
+import { ListAlojamientosComponent } from './components/list-alojamientos/list-alojamientos.component';
+import { FormAlojamientosComponent } from './components/form-alojamientos/form-alojamientos.component';
 
 
 
@@ -63,6 +65,8 @@ import { FormAreasComponent } from './components/form-areas/form-areas.component
     SidenComponent,
     ListAreasComponent,
     FormAreasComponent,
+    ListAlojamientosComponent,
+    FormAlojamientosComponent,
 
 
   ],

@@ -1,0 +1,37 @@
+<div class="container">
+    <mat-form-field>
+        <input matInput placeholder="ID especie" name="ID_Especie" [(ngModel)]=this.especies.selected.ID_Especie>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Denominación cientifica" name="Denom_Cientifica" [(ngModel)]=this.especies.selected.Denom_Cientifica>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Denominación vulgar" name="Denom_Vulgar" [(ngModel)]=this.especies.selected.Denom_Vulgar>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="Sexo" name="Sexo" [(ngModel)]=this.especies.selected.Sexo>
+            <mat-option value="Macho">Macho</mat-option>
+            <mat-option value="Hembra">Hembra</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Periodo de celo" name="Periodo_Celo" [(ngModel)]=this.especies.selected.Periodo_Celo>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="Tipo de alimentación" name="Tipo_Alimentacion" [(ngModel)]=this.especies.selected.Tipo_Alimentacion>
+            <mat-option value="Herbivora">Herbívora</mat-option>
+            <mat-option value="Carnivora">Carnívora</mat-option>
+            <mat-option value="Omnivora">Omnivora</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="Alimento de" name="Alimento_De"  multiple [(ngModel)]=this.especies.selected.Alimento_De>
+            <mat-option value="Herbivoros">Herbívoros</mat-option>
+            <mat-option value="Carnivoros">Carnívoros</mat-option>
+            <mat-option value="Omnivoros">Omnivoros</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button type="submit" mat-flat-button color="primary" (click)= "onSaveForm()">
+        <mat-icon>save</mat-icon> Guardar
+      </button>
+</div>

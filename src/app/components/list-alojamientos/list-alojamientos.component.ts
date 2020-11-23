@@ -50,8 +50,6 @@ export class ListAlojamientosComponent implements OnInit {
     this.alojamientosService.selected.Capacidad = 1;
     this.alojamientosService.selected.Categoria = '';
     this.alojamientosService.selected.id= null;
-
-
   }
 
 }

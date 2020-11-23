@@ -2,10 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { AlojamientosService } from 'src/app/services/alojamientos.service';
 
-interface categorias {
-  value: string;
-  viewValue: string;
-}
 
 @Component({
   selector: 'app-form-alojamientos',

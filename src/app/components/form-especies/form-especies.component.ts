@@ -21,7 +21,7 @@ export class FormEspeciesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSaveForm(){
+/*   onSaveForm(){
     if(this.especies.selected.id==null){
       let newEspecies ={
       Tipo_Especie: this.especies.selected.Tipo_Especie,
@@ -34,7 +34,7 @@ export class FormEspeciesComponent implements OnInit {
     }
     this.close();
   }
-    //metodo para cerrar pop up
+ */    //metodo para cerrar pop up
   close(): void{
     this.dialogRef.close();
 

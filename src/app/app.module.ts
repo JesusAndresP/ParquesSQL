@@ -47,7 +47,13 @@ import { ListAreasComponent } from './components/list-areas/list-areas.component
 import { FormAreasComponent } from './components/form-areas/form-areas.component';
 import { ListAlojamientosComponent } from './components/list-alojamientos/list-alojamientos.component';
 import { FormAlojamientosComponent } from './components/form-alojamientos/form-alojamientos.component';
-
+import {MatExpansionModule} from '@angular/material/expansion';
+import { ListAnimalesComponent } from './components/list-animales/list-animales.component';
+import { ListMineralesComponent } from './components/list-minerales/list-minerales.component';
+import { ListVegetalesComponent } from './components/list-vegetales/list-vegetales.component';
+import { FormAnimalesComponent } from './components/form-animales/form-animales.component';
+import { FormMineralesComponent } from './components/form-minerales/form-minerales.component';
+import { FormVegetalesComponent } from './components/form-vegetales/form-vegetales.component';
 
 
 
@@ -67,6 +73,12 @@ import { FormAlojamientosComponent } from './components/form-alojamientos/form-a
     FormAreasComponent,
     ListAlojamientosComponent,
     FormAlojamientosComponent,
+    ListAnimalesComponent,
+    ListMineralesComponent,
+    ListVegetalesComponent,
+    FormAnimalesComponent,
+    FormMineralesComponent,
+    FormVegetalesComponent,
 
 
   ],
@@ -80,6 +92,7 @@ import { FormAlojamientosComponent } from './components/form-alojamientos/form-a
     AngularFireDatabaseModule,
     FormsModule,
     MatModule,
+    MatExpansionModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
@@ -102,7 +115,10 @@ import { FormAlojamientosComponent } from './components/form-alojamientos/form-a
     FormEmpleadosComponent,
     FormEspeciesComponent,
     FormVisitantesComponent,
-    FormAreasComponent
+    FormAreasComponent,
+    FormAnimalesComponent,
+    FormMineralesComponent,
+    FormVegetalesComponent
 ] //Controla donde se muestra el componente
 })
 export class AppModule {}

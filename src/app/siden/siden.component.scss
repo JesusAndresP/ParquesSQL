@@ -25,3 +25,16 @@ mat-sidenav {
 .btn-cerrar{
     margin-left: 55%;
 }
+
+mat-expansion-panel-header {
+    margin-left:  -25px;
+
+}
+
+mat-expansion-panel-header mat-icon{
+    color:#616161 !important; 
+}
+
+mat-expansion-panel:not([class*='mat-elevation-z']) {
+    box-shadow: none;
+}

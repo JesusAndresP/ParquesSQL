@@ -6,6 +6,9 @@ import { ListVisitantesComponent } from './components/list-visitantes/list-visit
 import { ListEspeciesComponent } from './components/list-especies/list-especies.component';
 import { ListAreasComponent } from './components/list-areas/list-areas.component';
 import { ListAlojamientosComponent } from './components/list-alojamientos/list-alojamientos.component';
+import { ListAnimalesComponent } from './components/list-animales/list-animales.component';
+import { ListMineralesComponent } from './components/list-minerales/list-minerales.component';
+import { ListVegetalesComponent } from './components/list-vegetales/list-vegetales.component';
 
 const routes: Routes = [
   {
@@ -33,6 +36,19 @@ const routes: Routes = [
   {
     path:'especies',
     component:ListEspeciesComponent
+  },
+  {
+    path:'especie-animal',
+    component:ListAnimalesComponent
+  },
+  {
+    path:'especie-mineral',
+    component: ListMineralesComponent
+  },
+  {
+    path: 'especie-vegetal',
+    component: ListVegetalesComponent
+
   },
   {
     path:'alojamientos',

@@ -6,7 +6,7 @@
 
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
-  <ng-container matColumnDef="BtnAgregar">
+<!--   <ng-container matColumnDef="BtnAgregar">
     <th mat-header-cell *matHeaderCellDef>
       <button mat-button color="primary" (click)= "onEdit()">
       Agregar
@@ -14,29 +14,70 @@
     </button> </th>
     <td mat-cell *matCellDef= "let element"> </td>
   </ng-container>
-
+ -->
 
 
 
   <!-- Tipo especie Column -->
-  <ng-container matColumnDef="Tipo_Especie">
-    <th mat-header-cell *matHeaderCellDef> Tipo Especie </th>
-    <td mat-cell *matCellDef="let element"> {{element.Tipo_Especie}} </td>
+  <ng-container matColumnDef="ID_Especie">
+    <th mat-header-cell *matHeaderCellDef> ID especie </th>
+    <td mat-cell *matCellDef="let element"> {{element.ID_Especie}} </td>
   </ng-container>
 
   <!-- Nombre especie Column -->
-  <ng-container matColumnDef="Nombre_Especie">
-    <th mat-header-cell *matHeaderCellDef> Nombre Especie</th>
-    <td mat-cell *matCellDef="let element"> {{element.Nombre_Especie}} </td>
+  <ng-container matColumnDef="Denom_Cientifica">
+    <th mat-header-cell *matHeaderCellDef> Denominación cientifica</th>
+    <td mat-cell *matCellDef="let element"> {{element.Denom_Cientifica}} </td>
   </ng-container>
 
   <!-- Sexo Column -->
+  <ng-container matColumnDef="Denom_Vulgar">
+    <th mat-header-cell *matHeaderCellDef> Denominación vulgar </th>
+    <td mat-cell *matCellDef="let element"> {{element.Denom_Vulgar}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Tipo_Especie">
+    <th mat-header-cell *matHeaderCellDef> Tipo de especie </th>
+    <td mat-cell *matCellDef="let element"> {{element.Tipo_Especie}} </td>
+  </ng-container>
+
   <ng-container matColumnDef="Sexo">
     <th mat-header-cell *matHeaderCellDef> Sexo </th>
     <td mat-cell *matCellDef="let element"> {{element.Sexo}} </td>
   </ng-container>
 
-    <ng-container matColumnDef= "Acciones">
+  <ng-container matColumnDef="Tipo_Alimentacion">
+    <th mat-header-cell *matHeaderCellDef> Tipo de alimentación </th>
+    <td mat-cell *matCellDef="let element"> {{element.Tipo_Alimentacion}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Periodo_Celo">
+    <th mat-header-cell *matHeaderCellDef> Periodo de celo </th>
+    <td mat-cell *matCellDef="let element"> {{element.Periodo_Celo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Tipo_Mineral">
+    <th mat-header-cell *matHeaderCellDef> Tipo de mineral </th>
+    <td mat-cell *matCellDef="let element"> {{element.Tipo_Mineral}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Floracion">
+    <th mat-header-cell *matHeaderCellDef> Floración </th>
+    <td mat-cell *matCellDef="let element"> {{element.Floracion}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Periodo_Floracion">
+    <th mat-header-cell *matHeaderCellDef> Periodo de floración </th>
+    <td mat-cell *matCellDef="let element"> {{element.Periodo_Floracion}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Alimeto_De">
+    <th mat-header-cell *matHeaderCellDef> Alimento de  </th>
+    <td mat-cell *matCellDef="let element"> {{element.Alimento_De}} </td>
+  </ng-container>
+
+
+<!--     <ng-container matColumnDef= "Acciones">
       <th mat-header-cell *matHeaderCellDef> </th>
       <td mat-cell *matCellDef= "let element">
 
@@ -50,7 +91,7 @@
           <mat-icon>delete</mat-icon>
         </button > &nbsp;
       </td>
-    </ng-container>
+    </ng-container> -->
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

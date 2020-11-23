@@ -15,7 +15,7 @@ import { FormEspeciesComponent } from '../form-especies/form-especies.component'
 })
 export class ListEspeciesComponent implements OnInit {
 
-  displayedColumns: string[] = ['Tipo_Especie', 'Nombre_Especie', 'Sexo','Acciones','BtnAgregar'];
+  displayedColumns: string[] = ['ID_Especie', 'Denom_Cientifica','Denom_Vulgar','Tipo_Especie','Sexo','Periodo_Celo','Tipo_Alimentacion', 'Alimeto_De', 'Floracion','Periodo_Floracion','Tipo_Mineral'];
   dataSource = new MatTableDataSource();
   @ViewChild(MatSort) sort: MatSort;
 
@@ -24,8 +24,8 @@ export class ListEspeciesComponent implements OnInit {
     private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.especiesService.getAllEspecies().subscribe(res=> this.dataSource.data = res);
-  }
+ this.especiesService.getAllEspecies().subscribe(res=> this.dataSource.data = res);
+}
 
   ngAfterViewInit(){
     this.dataSource.sort = this.sort;
@@ -35,7 +35,7 @@ export class ListEspeciesComponent implements OnInit {
   }
  //Metodo editar
   onEdit(element){
-    this.resetForm();
+/*     this.resetForm(); */
     this.openModal();
     if(element){
       this.especiesService.selected = element;
@@ -58,11 +58,11 @@ export class ListEspeciesComponent implements OnInit {
 
   }
 
-  resetForm(): void{
+/*   resetForm(): void{
     this.especiesService.selected.Tipo_Especie = '';
     this.especiesService.selected.Nombre_Especie ='';
     this.especiesService.selected.Sexo ='';
-  }
+  } */
 
 
 }

@@ -1,0 +1,21 @@
+<div class="container">
+    <mat-form-field>
+        <input matInput placeholder="ID alojamiento" name="ID_Alojamiento"  [(ngModel)]="this.alojamiento.selected.ID_Alojamiento">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Capacidad" type="number" min=1 name="Capacidad" [(ngModel)]="this.alojamiento.selected.Capacidad">
+      </mat-form-field>
+ <mat-form-field>
+  <mat-select placeholder="Categoría" [(ngModel)]="this.alojamiento.selected.Categoria">
+      <mat-option value="Casa rural">Casa rural</mat-option>
+      <mat-option value="Hotel turistico">Hotel turistico</mat-option>
+      <mat-option value="Camping">Camping</mat-option>
+      <mat-option value="Resort">Resort</mat-option>
+      <mat-option value="Hotel de playa">Hotel de playa</mat-option>
+  </mat-select>
+</mat-form-field> 
+ 
+ <button type="submit" mat-flat-button color="primary" (click)= "onSaveForm()">
+        <mat-icon>save</mat-icon> Guardar
+      </button>    
+</div>

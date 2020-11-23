@@ -28,5 +28,6 @@ $btn-custom: mat-light-theme($btn-custom-primary,$btn-custom-accent,$btn-custom-
 @include mat-form-field-theme($btn-custom);
 @include mat-select-theme($btn-custom);
 @include mat-option-theme($btn-custom);
+@include mat-checkbox-theme($btn-custom);
 
 //https://github.com/angular/components/blob/master/src/material/core/theming/_all-theme.scss

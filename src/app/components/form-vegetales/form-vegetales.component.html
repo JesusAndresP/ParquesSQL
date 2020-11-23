@@ -1,0 +1,42 @@
+<div class="container">
+    <mat-form-field>
+        <input matInput placeholder="ID especie" name="ID_Especie" [(ngModel)]=this.especies.selected.ID_Especie>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Denominación cientifica" name="Denom_Cientifica" [(ngModel)]=this.especies.selected.Denom_Cientifica>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Denominación vulgar" name="Denom_Vulgar" [(ngModel)]=this.especies.selected.Denom_Vulgar>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="Alimento de" name="Alimento_De"  multiple [(ngModel)]=this.especies.selected.Alimento_De>
+            <mat-option value="Herbivoros">Herbívoros</mat-option>
+            <mat-option value="Carnivoros">Carnívoros</mat-option>
+            <mat-option value="Omnivoros">Omnivoros</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Floración" name="Floracion" [(ngModel)]=this.especies.selected.Floracion>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="Periodo de floración" name="Periodo_Floracion" multiple [(ngModel)]=this.especies.selected.Periodo_Floracion>
+            <mat-option value="Enero">Enero</mat-option>
+            <mat-option value="Febrero">Febrero</mat-option>
+            <mat-option value="Marzo">Marzo</mat-option>
+            <mat-option value="Abril">Abril</mat-option>
+            <mat-option value="Mayo">Mayo</mat-option>
+            <mat-option value="Junio">Junio</mat-option>
+            <mat-option value="Julio">Julio</mat-option>
+            <mat-option value="Agosto">Agosto</mat-option>
+            <mat-option value="Septiembre">Septiembre</mat-option>
+            <mat-option value="Octubre">Octubre</mat-option>
+            <mat-option value="Noviembre">Noviembre</mat-option>
+            <mat-option value="Diciembre">Diciembre</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+
+    <button type="submit" mat-flat-button color="primary" (click)= "onSaveForm()">
+        <mat-icon>save</mat-icon> Guardar
+      </button>
+</div>

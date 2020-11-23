@@ -14,12 +14,25 @@ export interface EspeciesID extends EspeciesI {id: string;}
 export class EspeciesService {
   private especiesCollection: AngularFirestoreCollection<EspeciesI>;
   especies: Observable<EspeciesID[]>;
+  animal$: Observable<EspeciesI[]>;
+  vegetal$: Observable<EspeciesI[]>;
+  mineral$: Observable<EspeciesI[]>;
+
+
 
   public selected ={
     id: null,
-    Tipo_Especie:'',
-    Nombre_Especie: '',
-    Sexo: '',
+    ID_Especie:'',
+    Denom_Cientifica:'',
+    Denom_Vulgar:'',
+    Tipo_Especie: '',
+    Sexo:'',
+    Periodo_Celo:'',
+    Tipo_Alimentacion:'',
+    Alimento_De:'',
+    Floracion:'',
+    Periodo_Floracion:'',
+    Tipo_Mineral:''
   };
 
 
@@ -45,8 +58,7 @@ export class EspeciesService {
   }
 
   editEspecies(especies:EspeciesID){
-    let id= '';
-    return this.especiesCollection.doc(id).update(especies);
+    return this.especiesCollection.doc(especies.id).update(especies);
 
   }
 
@@ -54,5 +66,42 @@ export class EspeciesService {
   //Obtiene el id del dato a eliminar y lo borra de firebase
   deleteEspecies(id: string){
     return this.especiesCollection.doc(id).delete();
+  }
+
+
+  getAllEspAnimal() {
+    const post  = this.afs.collection('especies', ref => ref.where('Tipo_Especie', '==', 'Animal'));
+    return this.animal$ = post.snapshotChanges()
+      .pipe(map(changes => {
+        return changes.map(action => {
+          const data = action.payload.doc.data() as EspeciesID;
+          data.id = action.payload.doc.id;
+          return data;
+        });
+      }));
+  }
+
+  getAllEspMineral() {
+    const post  = this.afs.collection('especies', ref => ref.where('Tipo_Especie', '==', 'Mineral'));
+    return this.animal$ = post.snapshotChanges()
+      .pipe(map(changes => {
+        return changes.map(action => {
+          const data = action.payload.doc.data() as EspeciesID;
+          data.id = action.payload.doc.id;
+          return data;
+        });
+      }));
+  }
+
+  getAllEspVegetal() {
+    const post  = this.afs.collection('especies', ref => ref.where('Tipo_Especie', '==', 'Vegetal'));
+    return this.animal$ = post.snapshotChanges()
+      .pipe(map(changes => {
+        return changes.map(action => {
+          const data = action.payload.doc.data() as EspeciesID;
+          data.id = action.payload.doc.id;
+          return data;
+        });
+      }));
   }
 }

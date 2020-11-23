@@ -15,11 +15,23 @@
                     <a mat-list-item [routerLink]="['empleados']"><mat-icon>people_alt</mat-icon> &nbsp; Empleados</a>
                     <a mat-list-item [routerLink]="['parques']"><mat-icon>terrain</mat-icon> &nbsp; Parques</a>
                     <a mat-list-item [routerLink]="['visitantes']"><mat-icon>luggage</mat-icon> &nbsp; Visitantes</a>
-                    <a mat-list-item [routerLink]="['especies']"><mat-icon>pets</mat-icon> &nbsp; Especies</a>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                           <mat-panel-title>
+                            <a mat-list-item [routerLink]="['especies']"><mat-icon>emoji_nature</mat-icon> &nbsp; Especies</a>
+                           </mat-panel-title>
+                         </mat-expansion-panel-header>
+                         <a mat-list-item [routerLink]="['especie-animal']"><mat-icon>pets</mat-icon> &nbsp; Especie animal</a>
+                         <a mat-list-item [routerLink]="['especie-mineral']"><mat-icon>scatter_plot</mat-icon> &nbsp; Especie mineral</a>
+                         <a mat-list-item [routerLink]="['especie-vegetal']"><mat-icon>local_florist</mat-icon> &nbsp; Especie vegetal</a>
+                       </mat-expansion-panel>                    
                     <a mat-list-item [routerLink]="['']"><mat-icon>nature_people</mat-icon> &nbsp;Servicios</a>
+                    
+
+
                     <mat-divider></mat-divider>
                     <a mat-list-item (click)="onLogout()"><mat-icon>exit_to_app</mat-icon> &nbsp;<strong>Cerrar sesión</strong> </a>
-                  </mat-nav-list>
+                </mat-nav-list>
             </mat-list>
         </mat-sidenav>
         <mat-sidenav-content>

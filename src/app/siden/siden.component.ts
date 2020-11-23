@@ -24,7 +24,7 @@ export class SidenComponent implements OnInit {
     }
   }
 
-
+  panelOpenState = false;
   ngOnInit(): void {
   }
 

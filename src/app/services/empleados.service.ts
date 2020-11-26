@@ -34,7 +34,9 @@ export class EmpleadosService {
     Entrada_Parque: '',
     Titulacion: '',
     Area: '',
-    Parque:''
+    Parque:'',
+    Matricula_Vehiculo: '',
+    Tipo_Vehiculo: ''
   };
 
 

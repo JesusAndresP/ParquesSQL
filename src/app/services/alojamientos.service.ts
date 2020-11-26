@@ -17,7 +17,8 @@ export class AlojamientosService {
     id: null,
     ID_Alojamiento: '',
     Capacidad: 1,
-    Categoria:''
+    Categoria:'',
+    Parque: ''
   }
 
   constructor(private readonly afs: AngularFirestore) {

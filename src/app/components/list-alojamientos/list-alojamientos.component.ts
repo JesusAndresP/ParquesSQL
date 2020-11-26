@@ -11,7 +11,7 @@ import { FormAlojamientosComponent } from '../form-alojamientos/form-alojamiento
   styleUrls: ['./list-alojamientos.component.scss']
 })
 export class ListAlojamientosComponent implements OnInit {
-  displayedColumns: string[] = ['ID_Alojamiento', 'Capacidad', 'Categoria', 'Acciones', 'new'];
+  displayedColumns: string[] = ['ID_Alojamiento', 'Capacidad', 'Categoria', 'Parque','Acciones', 'new'];
   dataSource = new MatTableDataSource();
 
   applyFilter(filterValue: string) {
@@ -49,6 +49,7 @@ export class ListAlojamientosComponent implements OnInit {
     this.alojamientosService.selected.ID_Alojamiento = '';
     this.alojamientosService.selected.Capacidad = 1;
     this.alojamientosService.selected.Categoria = '';
+    this.alojamientosService.selected.Parque = '';
     this.alojamientosService.selected.id= null;
   }
 

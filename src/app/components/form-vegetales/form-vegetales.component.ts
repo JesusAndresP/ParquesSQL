@@ -1,6 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Observable } from 'rxjs';
+import { AreasService } from 'src/app/services/areas.service';
 import { EspeciesService } from 'src/app/services/especies.service';
+import { AreaI } from 'src/models/areas.interface';
 
 @Component({
   selector: 'app-form-vegetales',
@@ -8,14 +11,20 @@ import { EspeciesService } from 'src/app/services/especies.service';
   styleUrls: ['./form-vegetales.component.scss']
 })
 export class FormVegetalesComponent implements OnInit {
+  public area$: Observable<AreaI[]>;
+
 
   constructor(
     public especies: EspeciesService,
+    public area: AreasService,
+
     private dialogRef: MatDialogRef<FormVegetalesComponent>,
     @Inject(MAT_DIALOG_DATA) data
   ) { }
 
   ngOnInit(): void {
+    this.area$ = this.area.getAllAreas();
+
   }
 
   onSaveForm(){
@@ -28,6 +37,7 @@ export class FormVegetalesComponent implements OnInit {
         Alimento_De: this.especies.selected.Alimento_De,
         Floracion: this.especies.selected.Floracion,
         Periodo_Floracion: this.especies.selected.Periodo_Floracion,
+        Area: this.especies.selected.Area
       }
       this.especies.addEspecies(newEspecie);
     }

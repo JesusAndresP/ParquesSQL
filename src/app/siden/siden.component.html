@@ -12,9 +12,20 @@
                     <a mat-list-item [routerLink]="['home']"><mat-icon>home</mat-icon>&nbsp; Principal</a>
                     <a mat-list-item [routerLink]="['areas']"><mat-icon>eco</mat-icon>&nbsp; Areas</a>
                     <a mat-list-item [routerLink]="['alojamientos']"><mat-icon>roofing</mat-icon> &nbsp; Alojamientos</a>
-                    <a mat-list-item [routerLink]="['empleados']"><mat-icon>people_alt</mat-icon> &nbsp; Empleados</a>
-                    <a mat-list-item [routerLink]="['parques']"><mat-icon>terrain</mat-icon> &nbsp; Parques</a>
-                    <a mat-list-item [routerLink]="['visitantes']"><mat-icon>luggage</mat-icon> &nbsp; Visitantes</a>
+
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                           <mat-panel-title>
+                            <a mat-list-item [routerLink]="['empleados']"><mat-icon>people_alt</mat-icon> &nbsp; Empleados</a>
+                           </mat-panel-title>
+                         </mat-expansion-panel-header>
+                         <a mat-list-item [routerLink]="['empleados-conservacion']"><mat-icon>engineering</mat-icon> &nbsp; Empleados de conservación</a>
+                         <a mat-list-item [routerLink]="['empleados-gestion']"><mat-icon>streetview</mat-icon> &nbsp; Empleados de gestión</a>
+                         <a mat-list-item [routerLink]="['empleados-investigacion']"><mat-icon>person_search</mat-icon> &nbsp; Empleados de investigación</a>
+                         <a mat-list-item [routerLink]="['vigilantes']"><mat-icon>local_police</mat-icon> &nbsp; Vigilantes</a>
+                       </mat-expansion-panel>                    
+
+                    
                     <mat-expansion-panel>
                         <mat-expansion-panel-header>
                            <mat-panel-title>
@@ -25,7 +36,10 @@
                          <a mat-list-item [routerLink]="['especie-mineral']"><mat-icon>scatter_plot</mat-icon> &nbsp; Especie mineral</a>
                          <a mat-list-item [routerLink]="['especie-vegetal']"><mat-icon>local_florist</mat-icon> &nbsp; Especie vegetal</a>
                        </mat-expansion-panel>                    
+
+                    <a mat-list-item [routerLink]="['parques']"><mat-icon>terrain</mat-icon> &nbsp; Parques</a>
                     <a mat-list-item [routerLink]="['']"><mat-icon>nature_people</mat-icon> &nbsp;Servicios</a>
+                    <a mat-list-item [routerLink]="['visitantes']"><mat-icon>luggage</mat-icon> &nbsp; Visitantes</a>
                     
 
 

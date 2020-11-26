@@ -31,8 +31,6 @@ import { AreasService } from './services/areas.service';
 
 //forms
 import { FormParquesComponent } from './components/form-parques/form-parques.component';
-import { FormEmpleadosComponent} from './components/form-empleados/form-empleados.component';
-import { FormEspeciesComponent} from './components/form-especies/form-especies.component';
 import { FormVisitantesComponent } from './components/form-visitantes/form-visitantes.component';
 
 
@@ -54,6 +52,14 @@ import { ListVegetalesComponent } from './components/list-vegetales/list-vegetal
 import { FormAnimalesComponent } from './components/form-animales/form-animales.component';
 import { FormMineralesComponent } from './components/form-minerales/form-minerales.component';
 import { FormVegetalesComponent } from './components/form-vegetales/form-vegetales.component';
+import { FormEmpconservacionComponent } from './components/form-empconservacion/form-empconservacion.component';
+import { FormEmpgestionComponent } from './components/form-empgestion/form-empgestion.component';
+import { FormEmpinvestigacionComponent } from './components/form-empinvestigacion/form-empinvestigacion.component';
+import { FormEmpvigilantesComponent } from './components/form-empvigilantes/form-empvigilantes.component';
+import { ListEmpconservacionComponent } from './components/list-empconservacion/list-empconservacion.component';
+import { ListEmpgestionComponent } from './components/list-empgestion/list-empgestion.component';
+import { ListEmpinvestigacionComponent } from './components/list-empinvestigacion/list-empinvestigacion.component';
+import { ListEmpvigilantesComponent } from './components/list-empvigilantes/list-empvigilantes.component';
 
 
 
@@ -65,8 +71,6 @@ import { FormVegetalesComponent } from './components/form-vegetales/form-vegetal
     ListVisitantesComponent,
     ListEspeciesComponent,
     FormParquesComponent,
-    FormEmpleadosComponent,
-    FormEspeciesComponent,
     FormVisitantesComponent,
     SidenComponent,
     ListAreasComponent,
@@ -79,6 +83,14 @@ import { FormVegetalesComponent } from './components/form-vegetales/form-vegetal
     FormAnimalesComponent,
     FormMineralesComponent,
     FormVegetalesComponent,
+    FormEmpconservacionComponent,
+    FormEmpgestionComponent,
+    FormEmpinvestigacionComponent,
+    FormEmpvigilantesComponent,
+    ListEmpconservacionComponent,
+    ListEmpgestionComponent,
+    ListEmpinvestigacionComponent,
+    ListEmpvigilantesComponent,
 
 
   ],
@@ -112,8 +124,6 @@ import { FormVegetalesComponent } from './components/form-vegetales/form-vegetal
   bootstrap: [AppComponent],
   entryComponents:[
     FormParquesComponent,
-    FormEmpleadosComponent,
-    FormEspeciesComponent,
     FormVisitantesComponent,
     FormAreasComponent,
     FormAnimalesComponent,

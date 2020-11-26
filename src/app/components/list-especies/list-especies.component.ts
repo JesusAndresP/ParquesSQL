@@ -4,7 +4,6 @@ import {MatSort} from '@angular/material/sort';
 import { EspeciesI} from '../../../models/especies.interface';
 import { EspeciesService } from '../../services/especies.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { FormEspeciesComponent } from '../form-especies/form-especies.component';
 
 
 
@@ -15,7 +14,7 @@ import { FormEspeciesComponent } from '../form-especies/form-especies.component'
 })
 export class ListEspeciesComponent implements OnInit {
 
-  displayedColumns: string[] = ['ID_Especie', 'Denom_Cientifica','Denom_Vulgar','Tipo_Especie','Sexo','Periodo_Celo','Tipo_Alimentacion', 'Alimeto_De', 'Floracion','Periodo_Floracion','Tipo_Mineral'];
+  displayedColumns: string[] = ['ID_Especie', 'Denom_Cientifica','Denom_Vulgar','Tipo_Especie',"Area"];
   dataSource = new MatTableDataSource();
   @ViewChild(MatSort) sort: MatSort;
 
@@ -33,36 +32,4 @@ export class ListEspeciesComponent implements OnInit {
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
- //Metodo editar
-  onEdit(element){
-/*     this.resetForm(); */
-    this.openModal();
-    if(element){
-      this.especiesService.selected = element;
-
-    }
-  }
-  //Metodo eliminar
-  //Obtiene el codigo que viene desde la interfaz de usuario e invoca el servicio
-  onDelete(id:string){
-    this.especiesService.deleteEspecies(id);
-  }
-//Metodo para abrir pop up
-  openModal(): void{
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.data={
-      title: 'Modal'
-    };
-    dialogConfig.autoFocus = true; //El foco del raton está en el formulario
-    this.dialog.open(FormEspeciesComponent, dialogConfig); //Abre el popup con el formulario
-
-  }
-
-/*   resetForm(): void{
-    this.especiesService.selected.Tipo_Especie = '';
-    this.especiesService.selected.Nombre_Especie ='';
-    this.especiesService.selected.Sexo ='';
-  } */
-
-
 }

@@ -16,7 +16,7 @@ export class ListAnimalesComponent implements OnInit {
   constructor(private especiesService: EspeciesService,
     private dialog: MatDialog) { }
 
-  displayedColumns: string[] = ['ID_Especie', 'Denom_Cientifica', 'Denom_Vulgar','Sexo','Periodo_Celo','Tipo_Alimentacion','Alimento_De', 'Acciones', 'BtnAgregar'];
+  displayedColumns: string[] = ['ID_Especie', 'Denom_Cientifica', 'Denom_Vulgar','Area','Sexo','Periodo_Celo','Tipo_Alimentacion','Alimento_De', 'Acciones', 'BtnAgregar'];
   dataSource = new MatTableDataSource();
 
   ngOnInit(): void {

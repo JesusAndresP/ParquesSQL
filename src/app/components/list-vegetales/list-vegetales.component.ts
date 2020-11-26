@@ -12,7 +12,7 @@ import { FormVegetalesComponent } from '../form-vegetales/form-vegetales.compone
 })
 
 export class ListVegetalesComponent implements OnInit {
-  displayedColumns: string[] = ['ID_Especie', 'Denom_Cientifica','Denom_Vulgar','Alimento_De', 'Floracion','Periodo_Floracion','Acciones','BtnAgregar'];
+  displayedColumns: string[] = ['ID_Especie', 'Denom_Cientifica','Denom_Vulgar','Alimento_De', 'Floracion','Periodo_Floracion','Area','Acciones','BtnAgregar'];
   dataSource = new MatTableDataSource();
 
 

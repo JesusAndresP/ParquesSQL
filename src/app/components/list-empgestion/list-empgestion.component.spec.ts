@@ -1,19 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import {FormEspeciesComponent} from './form-especies.component';
 
-describe('FormEspeciesComponent', () => {
-  let component: FormEspeciesComponent;
-  let fixture: ComponentFixture<FormEspeciesComponent>;
+import { ListEmpgestionComponent } from './list-empgestion.component';
+
+describe('ListEmpgestionComponent', () => {
+  let component: ListEmpgestionComponent;
+  let fixture: ComponentFixture<ListEmpgestionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormEspeciesComponent ]
+      declarations: [ ListEmpgestionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormEspeciesComponent);
+    fixture = TestBed.createComponent(ListEmpgestionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

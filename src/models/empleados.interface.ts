@@ -1,11 +1,15 @@
 export interface EmpleadosI {
-  $key?: string; //Angular necesita este campo.
-    ID_Empleado: number;
+    ID_Empleado: string;
     Nombre_Empleado: string;
-    SeguridadSocial: number;
+    SeguridadSocial: string;
     Direccion: string;
-    Telefono: number;
-    Celular: number;
-    Sueldo: number;
+    Telefono: string;
+    Celular: string;
+    Sueldo: string;
     Tipo_Empleado: string;
+    Especialidad?: string;
+    Entrada_Parque?: string;
+    Titulacion?: string;
+    Area?: string;
+    Parque?:string;
   }

@@ -32,7 +32,8 @@ export class EspeciesService {
     Alimento_De:'',
     Floracion:'',
     Periodo_Floracion:'',
-    Tipo_Mineral:''
+    Tipo_Mineral:'',
+    Area:''
   };
 
 

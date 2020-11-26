@@ -16,7 +16,7 @@ export class ListEmpvigilantesComponent implements OnInit {
     private empleadoService: EmpleadosService,
     private dialog: MatDialog) { }
 
-  displayedColumns: string[] = ['ID_Empleado', 'Nombre_Empleado', 'SeguridadSocial', 'Direccion','Telefono','Celular','Sueldo','Area','Acciones','BtnAgregar'];
+  displayedColumns: string[] = ['ID_Empleado', 'Nombre_Empleado', 'SeguridadSocial', 'Direccion','Telefono','Celular','Sueldo','Area','Vehiculo','Acciones','BtnAgregar'];
   dataSource = new MatTableDataSource();
 
   applyFilter(filterValue: string) {
@@ -65,6 +65,8 @@ export class ListEmpvigilantesComponent implements OnInit {
     this.empleadoService.selected.Celular = '';
     this.empleadoService.selected.Sueldo = '';
     this.empleadoService.selected.Tipo_Empleado = '';
+    this.empleadoService.selected.Tipo_Vehiculo = '';
+    this.empleadoService.selected.Matricula_Vehiculo = '';
     this.empleadoService.selected.id = null;
   }
 

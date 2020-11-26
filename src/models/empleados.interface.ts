@@ -12,4 +12,6 @@ export interface EmpleadosI {
     Titulacion?: string;
     Area?: string;
     Parque?:string;
+    Matricula_Vehiculo?: string;
+    Tipo_Vehiculo?: string;
   }

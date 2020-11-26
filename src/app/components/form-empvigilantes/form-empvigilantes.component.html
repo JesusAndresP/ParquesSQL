@@ -25,6 +25,19 @@
             <mat-option *ngFor="let area of area" [value]=area.Nombre_Area>{{area.Nombre_Area}}</mat-option>
         </mat-select>
     </mat-form-field>
+    <mat-divider></mat-divider>
+    <mat-form-field>
+      <input matInput placeholder="Matricula del vehiculo" name="Matricula_Vehiculo" [(ngModel)]=this.empleado.selected.Matricula_Vehiculo>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Tipo de vehiculo" [(ngModel)]=this.empleado.selected.Tipo_Vehiculo>
+        <mat-option value="Moto">Moto</mat-option> 
+        <mat-option value="Familiar">Familiar</mat-option>
+        <mat-option value="Todoterreno">Todoterreno</mat-option>
+    </mat-select>
+    </mat-form-field>
+    
+
 
     <button type="submit" mat-flat-button color="primary" (click)= "onSaveForm()">
       <mat-icon>save</mat-icon> Guardar

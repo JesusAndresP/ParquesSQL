@@ -14,6 +14,11 @@
       <mat-option value="Hotel de playa">Hotel de playa</mat-option>
   </mat-select>
 </mat-form-field> 
+<mat-form-field  *ngIf="parques$ | async as parques">
+  <mat-select placeholder="Parque correspondiente"  [(ngModel)]=this.alojamiento.selected.Parque>
+      <mat-option *ngFor="let parques of parques" [value]=parques.Nombre_Parque>{{parques.Nombre_Parque}}</mat-option>
+  </mat-select>
+</mat-form-field>
  
  <button type="submit" mat-flat-button color="primary" (click)= "onSaveForm()">
         <mat-icon>save</mat-icon> Guardar

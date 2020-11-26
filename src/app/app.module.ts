@@ -60,6 +60,9 @@ import { ListEmpconservacionComponent } from './components/list-empconservacion/
 import { ListEmpgestionComponent } from './components/list-empgestion/list-empgestion.component';
 import { ListEmpinvestigacionComponent } from './components/list-empinvestigacion/list-empinvestigacion.component';
 import { ListEmpvigilantesComponent } from './components/list-empvigilantes/list-empvigilantes.component';
+import { ListVisitasComponent } from './components/list-visitas/list-visitas.component';
+import { FormVisitaComponent } from './components/form-visita/form-visita.component';
+import { FormVisitasComponent } from './components/form-visitas/form-visitas.component';
 
 
 
@@ -91,6 +94,9 @@ import { ListEmpvigilantesComponent } from './components/list-empvigilantes/list
     ListEmpgestionComponent,
     ListEmpinvestigacionComponent,
     ListEmpvigilantesComponent,
+    ListVisitasComponent,
+    FormVisitaComponent,
+    FormVisitasComponent,
 
 
   ],

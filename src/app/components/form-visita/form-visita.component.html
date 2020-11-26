@@ -1,0 +1,16 @@
+<div class="container">
+<mat-form-field *ngIf="parques$ | async as parque">
+    <mat-select placeholder="Nombre parque" multiple [(ngModel)]=this.visita.selected.ID_Parque>
+        <mat-option *ngFor="let parque of parque" [value]=parque.Nombre_Parque>{{parque.Nombre_Parque}}</mat-option>
+    </mat-select>
+</mat-form-field>
+<mat-form-field *ngIf="visitantes$ | async as visitante">
+<mat-select placeholder="Nombre visitante" multiple [(ngModel)]=this.visita.selected.ID_Visitante>
+    <mat-option *ngFor="let visitante of visitante" [value]=visitante.Nombre_Visitante>{{visitante.Nombre_Visitante}}</mat-option>
+</mat-select>
+</mat-form-field>
+
+<button type="submit" mat-flat-button color="primary" (click)= "onSaveForm()">
+    <mat-icon>save</mat-icon> Guardar
+  </button>
+</div>

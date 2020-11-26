@@ -13,6 +13,7 @@ import { ListEmpgestionComponent } from './components/list-empgestion/list-empge
 import { ListEmpconservacionComponent } from './components/list-empconservacion/list-empconservacion.component';
 import { ListEmpinvestigacionComponent } from './components/list-empinvestigacion/list-empinvestigacion.component';
 import { ListEmpvigilantesComponent } from './components/list-empvigilantes/list-empvigilantes.component';
+import { ListVisitasComponent } from './components/list-visitas/list-visitas.component';
 
 const routes: Routes = [
   {
@@ -52,6 +53,10 @@ const routes: Routes = [
   {
     path:'visitantes',
     component:ListVisitantesComponent
+  },
+  {
+    path:'servicios',
+    component:ListVisitasComponent
   },
   {
     path:'especies',

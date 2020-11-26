@@ -36,6 +36,8 @@ export class FormEmpvigilantesComponent implements OnInit {
         SeguridadSocial: this.empleado.selected.SeguridadSocial,
         Tipo_Empleado: 'Vigilante',
         Area: this.empleado.selected.Area,
+        Matricula_Vehiculo: this.empleado.selected.Matricula_Vehiculo,
+        Tipo_Vehiculo: this.empleado.selected.Tipo_Vehiculo
       }
       this.empleado.addEmpleado(newEmpleado);
     }

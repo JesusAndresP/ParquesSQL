@@ -9,11 +9,15 @@ import { ListAlojamientosComponent } from './components/list-alojamientos/list-a
 import { ListAnimalesComponent } from './components/list-animales/list-animales.component';
 import { ListMineralesComponent } from './components/list-minerales/list-minerales.component';
 import { ListVegetalesComponent } from './components/list-vegetales/list-vegetales.component';
+import { ListEmpgestionComponent } from './components/list-empgestion/list-empgestion.component';
+import { ListEmpconservacionComponent } from './components/list-empconservacion/list-empconservacion.component';
+import { ListEmpinvestigacionComponent } from './components/list-empinvestigacion/list-empinvestigacion.component';
+import { ListEmpvigilantesComponent } from './components/list-empvigilantes/list-empvigilantes.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo:'/home',
+    redirectTo:'/login',
     pathMatch: 'full',
   },
   
@@ -28,6 +32,22 @@ const routes: Routes = [
   {
     path:'empleados',
     component:ListEmpleadosComponent
+  },
+  {
+    path:'empleados-conservacion',
+    component:ListEmpconservacionComponent
+  },
+  {
+    path:'empleados-gestion',
+    component:ListEmpgestionComponent
+  },
+  {
+    path:'empleados-investigacion',
+    component:ListEmpinvestigacionComponent
+  },
+  {
+    path:'vigilantes',
+    component:ListEmpvigilantesComponent
   },
   {
     path:'visitantes',

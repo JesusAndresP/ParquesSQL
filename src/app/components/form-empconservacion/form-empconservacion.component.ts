@@ -1,26 +1,22 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { from } from 'rxjs';
-import { EmpleadosService } from '../../services/empleados.service';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-
-
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { EmpleadosService } from 'src/app/services/empleados.service';
 
 @Component({
-  selector: 'app-form-empleados',
-  templateUrl: './form-empleados.component.html',
-  styleUrls: ['./form-empleados.component.scss']
+  selector: 'app-form-empconservacion',
+  templateUrl: './form-empconservacion.component.html',
+  styleUrls: ['./form-empconservacion.component.scss']
 })
-export class FormEmpleadosComponent implements OnInit {
+export class FormEmpconservacionComponent implements OnInit {
 
   constructor(
     public empleado: EmpleadosService,
-    private dialogRef: MatDialogRef<FormEmpleadosComponent>,
-    @Inject(MAT_DIALOG_DATA) data) { }
-
+    private dialogRef: MatDialogRef<FormEmpconservacionComponent>,
+    @Inject(MAT_DIALOG_DATA) data
+  ) { }
 
   ngOnInit(): void {
   }
-
   onSaveForm(){
     if(this.empleado.selected.id ==null){
       let newEmpleado ={
@@ -31,7 +27,9 @@ export class FormEmpleadosComponent implements OnInit {
         Celular: this.empleado.selected.Celular,
         Direccion: this.empleado.selected.Direccion,
         SeguridadSocial: this.empleado.selected.SeguridadSocial,
-        Tipo_Empleado: this.empleado.selected.Tipo_Empleado
+        Tipo_Empleado: 'Conservacion',
+        Especialidad: this.empleado.selected.Especialidad
+
       }
       this.empleado.addEmpleado(newEmpleado);
     }
@@ -45,5 +43,7 @@ export class FormEmpleadosComponent implements OnInit {
     this.dialogRef.close();
 
   }
+
+
 
 }

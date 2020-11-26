@@ -31,6 +31,13 @@
             <mat-option value="Omnivoros">Omnivoros</mat-option>
         </mat-select>
     </mat-form-field>
+
+        <mat-form-field  *ngIf="area$ | async as area">
+            <mat-select placeholder="Area" multiple [(ngModel)]=this.especies.selected.Area>
+                <mat-option *ngFor="let area of area" [value]=area.Nombre_Area>{{area.Nombre_Area}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
     <button type="submit" mat-flat-button color="primary" (click)= "onSaveForm()">
         <mat-icon>save</mat-icon> Guardar
       </button>

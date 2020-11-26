@@ -12,7 +12,7 @@ import { FormMineralesComponent } from '../form-minerales/form-minerales.compone
 })
 
 export class ListMineralesComponent implements OnInit {
-  displayedColumns: string[] = ['ID_Especie', 'Denom_Cientifica','Denom_Vulgar','Tipo_Mineral','Acciones','BtnAgregar'];
+  displayedColumns: string[] = ['ID_Especie', 'Denom_Cientifica','Denom_Vulgar','Tipo_Mineral','Area','Acciones','BtnAgregar'];
   dataSource = new MatTableDataSource();
 
 

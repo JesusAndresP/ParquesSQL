@@ -1,0 +1,37 @@
+<div class="container">
+    <mat-form-field>
+      <input matInput type="number" placeholder="ID empleado" name="ID_Empleado" [(ngModel)]=this.empleado.selected.ID_Empleado>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Num seguridad social" name="Num_SeguridadSocial" [(ngModel)]=this.empleado.selected.SeguridadSocial>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Nombre empleado" name="Nombre_Empleado" [(ngModel)]=this.empleado.selected.Nombre_Empleado>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput  placeholder="Direccion" name="Direccion" [(ngModel)]=this.empleado.selected.Direccion>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="tel" placeholder="Telefono" name="Telefono" [(ngModel)]=this.empleado.selected.Telefono>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="tel" placeholder="Celular" name="Celular" [(ngModel)]=this.empleado.selected.Celular>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Sueldo" name="Sueldo" [(ngModel)]=this.empleado.selected.Sueldo>
+    </mat-form-field>
+      <mat-form-field  *ngIf="parques$ | async as parques">
+        <mat-select placeholder="Parque al que pertenece"  [(ngModel)]=this.empleado.selected.Parque>
+            <mat-option *ngFor="let parques of parques" [value]=parques.Nombre_Parque>{{parques.Nombre_Parque}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Entrada asignada" name="Entrada_Parque" [(ngModel)]=this.empleado.selected.Entrada_Parque>
+    </mat-form-field>
+    <button type="submit" mat-flat-button color="primary" (click)= "onSaveForm()">
+      <mat-icon>save</mat-icon> Guardar
+    </button>
+  
+  </div>
+  

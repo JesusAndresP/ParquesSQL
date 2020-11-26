@@ -10,5 +10,6 @@ export interface EspeciesI {
     Alimento_De?: string,
     Floracion?: string,
     Periodo_Floracion?: string,
-    Tipo_Mineral?: string
+    Tipo_Mineral?: string,
+    Area: string
   }

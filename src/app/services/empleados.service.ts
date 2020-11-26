@@ -14,17 +14,27 @@ export interface EmpleadosID extends EmpleadosI {id: string;}
 export class EmpleadosService {
   private empleadosCollection: AngularFirestoreCollection<EmpleadosI>;
   empleados: Observable<EmpleadosID[]>;
+  gestion$: Observable<EmpleadosI[]>;
+  conservacion$: Observable<EmpleadosI[]>
+  investigacion$: Observable<EmpleadosI[]>
+  vigilante$: Observable<EmpleadosI[]>
+
 
   public selected ={
     id: null,
-    ID_Empleado: 0,
+    ID_Empleado: '',
     Nombre_Empleado:'',
-    SeguridadSocial:0,
+    SeguridadSocial:'',
     Direccion: '',
-    Telefono:0,
-    Celular:0,
-    Sueldo: 0,
+    Telefono:'',
+    Celular:'',
+    Sueldo: '',
     Tipo_Empleado: '',
+    Especialidad: '',
+    Entrada_Parque: '',
+    Titulacion: '',
+    Area: '',
+    Parque:''
   };
 
 
@@ -58,4 +68,58 @@ export class EmpleadosService {
   deleteEmpleado(id: string){
     return this.empleadosCollection.doc(id).delete();
   }
+
+  getAllEmpConservacion() {
+    const post  = this.afs.collection('empleados', ref => ref.where('Tipo_Empleado', '==', 'Conservacion'));
+    return this.conservacion$= post.snapshotChanges()
+      .pipe(map(changes => {
+        return changes.map(action => {
+          const data = action.payload.doc.data() as EmpleadosID;
+          data.id = action.payload.doc.id;
+          return data;
+        });
+      }));
+  }
+
+  getAllEmpGestion() {
+    const post  = this.afs.collection('empleados', ref => ref.where('Tipo_Empleado', '==', 'Gestion'));
+    return this.gestion$= post.snapshotChanges()
+      .pipe(map(changes => {
+        return changes.map(action => {
+          const data = action.payload.doc.data() as EmpleadosID;
+          data.id = action.payload.doc.id;
+          return data;
+        });
+      }));
+  }
+
+  getAllEmpInvestigacion() {
+    const post  = this.afs.collection('empleados', ref => ref.where('Tipo_Empleado', '==', 'Investigacion'));
+    return this.investigacion$= post.snapshotChanges()
+      .pipe(map(changes => {
+        return changes.map(action => {
+          const data = action.payload.doc.data() as EmpleadosID;
+          data.id = action.payload.doc.id;
+          return data;
+        });
+      }));
+  }
+  getAllEmpVigilante() {
+    const post  = this.afs.collection('empleados', ref => ref.where('Tipo_Empleado', '==', 'Vigilante'));
+    return this.vigilante$= post.snapshotChanges()
+      .pipe(map(changes => {
+        return changes.map(action => {
+          const data = action.payload.doc.data() as EmpleadosID;
+          data.id = action.payload.doc.id;
+          return data;
+        });
+      }));
+  }
+
+
+
+
+
+
+
 }

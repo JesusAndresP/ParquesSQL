@@ -4,8 +4,6 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/Operators';
 import { AlojamientoI } from 'src/models/alojamientos.interface';
 
-
-
 export interface AlojamientoID extends AlojamientoI{ id: string;}
 @Injectable({
   providedIn: 'root'
